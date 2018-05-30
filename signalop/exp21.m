@@ -13,7 +13,7 @@ title('Original Input Signal');
 
 d=input('Enter delay value: ');
 subplot(3,3,2);
-x=-di+d:di+d;
+x=-di-d:di-d;
 stem(x,y);
 xlabel('no of samples');
 ylabel('amplitude');
@@ -21,7 +21,7 @@ title('Delay');
 
 a=input('Enter advance value: ');
 subplot(3,3,3);
-x=-di-a:di-a;
+x=-di+a:di+a;
 stem(x,y);
 xlabel('no of samples');
 ylabel('amplitude');

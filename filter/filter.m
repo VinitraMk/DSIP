@@ -40,7 +40,12 @@ for i=1:r
       sh=sh+gh(k);      
     end
     outlf(i+1,j+1)=sl;
-    outhf(i+1,j+1)=sh;
+    if(sh<0)
+      outhf(i+1,j+1)=0;
+    else
+      outhf(i+1,j+1)=sh;
+    end
+      
   end
 end
 
@@ -71,10 +76,4 @@ imshow(uint8(outlf));
 title('Low Pass Filter');
 subplot(2,3,6);
 imshow(uint8(outmf));
-title('Median Filter');
-
-
-
-  
-
-    
+title('Median Filter'); 
